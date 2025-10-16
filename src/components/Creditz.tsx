@@ -9,6 +9,13 @@ const creditzFurtherExtTexTwo = "Renke Brixel & Stephan Ullmann";
 const creditzFurtherExtTexThree =
   "für den absolut verstehenswerten und leidenschaftlichen Support.";
 const creditzFurtherExtTexFourIGuess = "u guys pushed us :3";
+const furtherCredz = {
+  renke: "Renke - visit renke-brixel.netlify.app",
+  stephan: "Stephan - visit stephanullmann.dev",
+  wbs: "WBS Coding School - visit wbscodingschool.com",
+  artic: "the Art Institute of Chicago - visit artic.edu",
+  coder: "the coder himself 👋🏽",
+};
 
 export default function Creditz() {
   return (
@@ -94,8 +101,8 @@ export default function Creditz() {
       </div>
       <div className="text-extralight text-xs text-secondary tracking-widest p-4">
         <ul>
-          <li>Renke - renke-brixel.netlify.app</li>
-          <li>Stephan - stephanullmann.dev</li>
+          <li>{furtherCredz.renke}</li>
+          <li>{furtherCredz.stephan}</li>
           <li>... but not right now, that's why they are not linked :3</li>
         </ul>
       </div>
@@ -106,12 +113,13 @@ export default function Creditz() {
         (in unsorted order):
         <div className="text-extralight text-xs text-secondary tracking-widest p-4">
           <ul>
-            <li>The Art Institute of Chicago - artic.edu</li>
-            <li>WBS Coding School - WBSCodingSchool.com</li>
-            <li>Mal - github.com/yaaintmal</li>
+            <li>{furtherCredz.artic}</li>
+            <li>{furtherCredz.wbs}</li>
+            <li>{furtherCredz.coder}</li>
           </ul>
         </div>
       </div>
     </div>
   );
 }
+art - gallery;
