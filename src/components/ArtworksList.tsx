@@ -55,7 +55,7 @@ const ArtworksList: React.FC<ArtworksListProps> = ({ navigateTo }) => {
       </h3>
 
       <ul className="list bg-base-100 rounded-box shadow-xl divide-y divide-base-200">
-        <li className="p-4 pb-2 text-xs opacity-60 tracking-wide text-base-content/80">
+        <li className="p-4 pb-2 text-xs opacity-60 tracking-wide w-[calc(33%-2rem)] text-base-content/80">
           Artist / Title / Description
         </li>
 
@@ -79,9 +79,8 @@ const ArtworksList: React.FC<ArtworksListProps> = ({ navigateTo }) => {
                   alt={item.title}
                 />
               </div>
-
               {/* Artist and Title */}
-              <div className="w-48 mr-4 flex-shrink-0">
+              <div className="w-48 mr-4 flex-shrink-1">
                 <div className="font-bold text-sm text-primary">
                   {artistName}
                 </div>
@@ -89,12 +88,13 @@ const ArtworksList: React.FC<ArtworksListProps> = ({ navigateTo }) => {
                   {item.title}
                 </div>
               </div>
-
               {/* Short Description */}
-              <p className="list-col-wrap text-xs text-base-content/80 flex-grow mr-4">
+              {/* 
+              <p className="text-nowrap w-full text-xs text-base-content/80 flex-grow mr-4">{shortDescription}</p> */}
+              {/* refac: adjusted for mobile phones */}
+              <div className="text-xs text-base-content/80 flex-grow mr-4 min-w-0 hidden sm:block">
                 {shortDescription}
-              </p>
-
+              </div>
               {/* Play Button */}
               <button
                 className="btn btn-square btn-ghost flex-shrink-0"
@@ -116,7 +116,6 @@ const ArtworksList: React.FC<ArtworksListProps> = ({ navigateTo }) => {
                   </g>
                 </svg>
               </button>
-
               {/* Heart/Favorite Button */}
               <button
                 className={`btn btn-square btn-ghost flex-shrink-0`}
