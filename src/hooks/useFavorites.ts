@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const FAVORITES_KEY = "aic_favorites";
+const FAVORITES_KEY = "ofaa_favorites";
 
 // Custom hook to manage favorite artworks
 // reurning obj w/ current favorites set and functions to check/toggle.

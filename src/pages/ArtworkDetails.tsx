@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import LoadingSpinner from "./LoadingSpinner";
+import LoadingSpinner from "../components/LoadingSpinner";
 import { getImageURL } from "../utils/image";
 import type { ArtworkItem } from "../schemas/art";
-import TextPressure from "./TextPressure";
+import TextPressure from "../components/TextPressure";
 
 interface ArticItemState {
   item: ArtworkItem | null;

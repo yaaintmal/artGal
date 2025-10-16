@@ -1,7 +1,7 @@
 import React from "react";
 import { useArticApi } from "../hooks/useApi";
 import { useFavorites } from "../hooks/useFavorites";
-import LoadingSpinner from "./LoadingSpinner";
+import LoadingSpinner from "../components/LoadingSpinner";
 import { getImageURL } from "../utils/image";
 import type { ArtworkItem } from "../schemas/art";
 import type { AppView } from "../App";

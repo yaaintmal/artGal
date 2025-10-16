@@ -1,20 +1,16 @@
 import React from "react";
-import type { ArtworkItem } from "../schemas/art";
+
+// utils
 import { getImageURL } from "../utils/image";
+
+// schemas
+import type { ArtworkItem } from "../schemas/art";
 
 interface ArtworkItemCardProps {
   item: ArtworkItem;
 }
 
 const ArtworkItemCard: React.FC<ArtworkItemCardProps> = ({ item }) => {
-  //*
-  // TODO: REFAC cleanedDescription >> not working right now as expected /// refac 2: fixed in ArtworkDetails Whoop Whoop 🥳
-  //*
-
-  // const cleanedDescription = item.description
-  //   ? item.description.replace(/<[^>]*>/g, "").substring(0, 150) + "..."
-  //   : "No description available.";
-
   const imageUrl = getImageURL(item.image_id, "400"); // setting image size
 
   return (

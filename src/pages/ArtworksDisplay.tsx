@@ -1,9 +1,9 @@
 import React from "react";
 import { useArticApi } from "../hooks/useApi";
-import LoadingSpinner from "./LoadingSpinner";
+import LoadingSpinner from "../components/LoadingSpinner";
 import { getImageURL } from "../utils/image";
 import type { ArtworkItem } from "../schemas/art";
-import TextPressure from "./TextPressure";
+import TextPressure from "../components/TextPressure";
 import type { AppView } from "../App";
 
 // refac: now importing from schemas/limits

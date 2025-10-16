@@ -1,4 +1,4 @@
-import TextPressure from "./TextPressure";
+import TextPressure from "../components/TextPressure";
 
 const creditzText = "Creditz";
 
@@ -29,9 +29,10 @@ export default function Creditz() {
           width={true}
           weight={true}
           italic={true}
-          textColor="#242424"
-          strokeColor="#222222"
+          textColor=""
+          strokeColor=""
           minFontSize={36}
+          className="text-primary/80"
         />
         <div className="h-4"></div>
         <TextPressure
@@ -42,8 +43,8 @@ export default function Creditz() {
           width={true}
           weight={true}
           italic={true}
-          textColor="#242424"
-          strokeColor="#222222"
+          textColor=""
+          strokeColor=""
           minFontSize={36}
         />
         <div className="h-4"></div>
@@ -55,8 +56,8 @@ export default function Creditz() {
           width={true}
           weight={true}
           italic={true}
-          textColor="#242424"
-          strokeColor="#222222"
+          textColor=""
+          strokeColor=""
           minFontSize={36}
         />
         <TextPressure
@@ -67,9 +68,10 @@ export default function Creditz() {
           width={true}
           weight={true}
           italic={true}
-          textColor="#242424"
-          strokeColor="#222222"
+          textColor=""
+          strokeColor=""
           minFontSize={36}
+          className="text-primary/60"
         />
         <TextPressure
           text={creditzFurtherExtTexThree}
@@ -79,8 +81,8 @@ export default function Creditz() {
           width={true}
           weight={true}
           italic={true}
-          textColor="#242424"
-          strokeColor="#222222"
+          textColor=""
+          strokeColor=""
           minFontSize={36}
         />
         <TextPressure
@@ -91,8 +93,8 @@ export default function Creditz() {
           width={true}
           weight={true}
           italic={true}
-          textColor="#242424"
-          strokeColor="#222222"
+          textColor=""
+          strokeColor=""
           minFontSize={36}
         />
         <div className="h-4"></div>
@@ -104,9 +106,10 @@ export default function Creditz() {
           width={true}
           weight={true}
           italic={true}
-          textColor="#242424"
-          strokeColor="#222222"
+          textColor=""
+          strokeColor=""
           minFontSize={36}
+          className="text-primary/40"
         />
       </div>
 

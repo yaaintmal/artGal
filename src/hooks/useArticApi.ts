@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+
+// schemas
 import type { ArticApiResponse, ArtworkItem } from "../schemas/art";
 
 interface ArticApiState {

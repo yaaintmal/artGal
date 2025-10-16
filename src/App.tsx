@@ -1,9 +1,17 @@
-import React, { useState } from "react";
-import ArtworksDisplay from "./components/ArtworksDisplay";
-import ArtworksList from "./components/ArtworksList";
-import Creditz from "./components/Creditz";
+import React, { useEffect, useState } from "react";
+
+// components
 import NavDock from "./components/NavDock";
-import ArtworkDetails from "./components/ArtworkDetails";
+
+// pages
+import ArtworksDisplay from "./pages/ArtworksDisplay";
+import ArtworksList from "./pages/ArtworksList";
+import Creditz from "./pages/Creditz";
+import ArtworkDetails from "./pages/ArtworkDetails";
+
+// importing themes &
+import { getRandomTheme } from "./utils/themes";
+const THEME_STORAGE_KEY = "daisyui-theme";
 
 // union typing for possible views/screens
 export type AppView =
@@ -36,7 +44,16 @@ const App: React.FC = () => {
         return <ArtworksDisplay navigateTo={navigateTo} />;
     }
   };
+  useEffect(() => {
+    let currentTheme = sessionStorage.getItem(THEME_STORAGE_KEY);
 
+    if (!currentTheme) {
+      currentTheme = getRandomTheme();
+      sessionStorage.setItem(THEME_STORAGE_KEY, currentTheme);
+    }
+
+    document.documentElement.setAttribute("data-theme", currentTheme);
+  }, []);
   return (
     <div className="flex justify-center">
       {/* setter func for navDoc yayay */}
