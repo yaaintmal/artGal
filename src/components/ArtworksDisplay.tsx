@@ -6,7 +6,7 @@ import type { ArtworkItem } from "../schemas/art";
 import TextPressure from "./TextPressure";
 import type { AppView } from "../App";
 
-const CAROUSEL_LIMIT = 11;
+const CAROUSEL_LIMIT = 7;
 
 type ArtworksDisplayProps = {
   navigateTo: (view: AppView) => void;
