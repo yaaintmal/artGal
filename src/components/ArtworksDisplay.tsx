@@ -61,8 +61,8 @@ const ArtworksDisplay: React.FC<ArtworksDisplayProps> = ({ navigateTo }) => {
       <h3 className="text-xl p-4 font-extrabold mb-6 text-primary  border-base-content/20 pb-2">
         found ({artworks.length} valid entries)
       </h3>
-      <div className="min-h-screen font-sans flex items-start justify-center pt-8">
-        <div className="w-full max-w-4xl bg-base-100 shadow-lg rounded-xl overflow-hidden">
+      <div className="min-h-screen font-sans flex items-start justify-center pt-4">
+        <div className="w-full max-w-xl bg-base-100 shadow-lg rounded-xl overflow-hidden">
           <div className={`carousel w-full aspect-video relative`}>
             {artworks.map((item: ArtworkItem, index: number) => {
               const imageUrl = getImageURL(item.image_id, "1680");
