@@ -63,7 +63,7 @@ const ArtworksDisplay: React.FC<ArtworksDisplayProps> = ({ navigateTo }) => {
       </h3>
       <div className="min-h-screen font-sans flex items-start justify-center pt-4">
         <div className="w-full max-w-xl bg-base-100 shadow-lg rounded-xl overflow-hidden">
-          <div className={`carousel w-full aspect-video relative`}>
+          <div className={"carousel w-full h-96 md:h-auto relative"}>
             {artworks.map((item: ArtworkItem, index: number) => {
               const imageUrl = getImageURL(item.image_id, "1680");
               const itemId = `item${index + 1}`;
