@@ -3,7 +3,7 @@
 Still hang' around with us? That's awesome.
 Today we like to present you ~ taadaa~ 
 
-## artGal aka OFAA (Our Fakn Awesome ArtGal)
+## artGal aka OFAA (Our Fakn Awesome ArtworkGalery)
 
 
 You probably know the visuals, apart from that we included some awesome typesafety components using VITE + TypeScript + React + Zod + TailwindCSS + DaisyUI + ReactBits... you see, we're starting getting serious here.
