@@ -1,35 +1,11 @@
 import { z } from "zod";
 
-// export interface ArtworkItem {
-//   id: number;
-//   title: string;
-//   artist_display: string;
-//   description: string | null;
-//   api_link: string;
-//   date_display: string;
-//   medium_display: string;
-//   image_id: string | null; // Necessary for constructing the image URL
-//   thumbnail: {
-//     lqip: string;
-//     alt_text: string;
-//   } | null;
-// }
-
-// export interface ArticApiResponse {
-//   data: ArtworkItem[];
-//   pagination: {
-//     next_url: string;
-//   };
-// }
-
-//! refac the last one: zod
-
 const ThumbnailSchema = z.object({
   lqip: z.string(),
   alt_text: z.string(),
 });
 
-// defining structure of single ArtworkItem
+// defining structure of single ArtworkItem with zod
 export const ArtworkItemSchema = z.object({
   id: z.number().int(),
   title: z.string(),

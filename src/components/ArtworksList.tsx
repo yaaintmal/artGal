@@ -6,7 +6,9 @@ import { getImageURL } from "../utils/image";
 import type { ArtworkItem } from "../schemas/art";
 import type { AppView } from "../App";
 
-const LIST_LIMIT = 70;
+// refac: now importing from schemas/limits
+// const LIST_LIMIT = 70;
+import { LIST_LIMIT } from "../schemas/limits";
 
 interface ArtworksListProps {
   navigateTo: (view: AppView) => void;
