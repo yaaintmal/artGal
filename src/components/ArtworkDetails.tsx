@@ -97,7 +97,7 @@ const ArtworkDetails: React.FC<ArtworkDetailsProps> = ({ artworkId }) => {
         <div className="text-2xl font-extrabold text-secondary">
           <div
             className="p-4"
-            style={{ position: "relative", height: "128px" }}
+            style={{ position: "relative", height: "192px" }}
           >
             <TextPressure
               text={item.title}
@@ -121,7 +121,7 @@ const ArtworkDetails: React.FC<ArtworkDetailsProps> = ({ artworkId }) => {
           <img
             src={imageUrl}
             alt={`Image of ${item.title}`}
-            className="w-2/3 mx-auto object-contain rounded-xl mb-6"
+            className="w-2/3 mx-auto object-contain rounded-xl mb-4"
           />
         )}
 

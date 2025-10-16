@@ -110,7 +110,7 @@ export default function Creditz() {
         />
       </div>
 
-      <div className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-warning to-accent p-4 mt-23">
+      <div className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-warning to-accent p-4 mt-12">
         also visit:
       </div>
       <div className="text-extralight text-xs text-secondary tracking-widest p-4">
