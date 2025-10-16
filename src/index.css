@@ -3,8 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 @plugin "daisyui" {
-  themes: light, dark --prefersdark, cupcake, lofi --default, abyss, corporate,
-    dracula;
+  themes: lofi --default, wireframe, halloween, abyss, corporate, dark, black;
   /* dark --prefersdark; */
 }
 

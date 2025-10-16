@@ -1,11 +1,11 @@
 const THEMES = [
-  "light",
-  "dark",
-  "cupcake",
   "lofi",
+  "wireframe",
+  "halloween",
   "abyss",
   "corporate",
-  "dracula",
+  "dark",
+  "black",
 ];
 
 export const getRandomTheme = () => {

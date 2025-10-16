@@ -59,9 +59,10 @@ const ArtworksDisplay: React.FC<ArtworksDisplayProps> = ({ navigateTo }) => {
           width={true}
           weight={true}
           italic={true}
-          textColor="#242424"
-          strokeColor="#222222"
+          textColor=""
+          strokeColor=""
           minFontSize={36}
+          className="text-primary/80"
         />
       </div>
       <h3 className="text-xl p-4 font-extrabold mb-6 text-primary  border-base-content/20 pb-2">
