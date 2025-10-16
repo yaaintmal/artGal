@@ -4,12 +4,15 @@ import LoadingSpinner from "./LoadingSpinner";
 import { getImageURL } from "../utils/image";
 import type { ArtworkItem } from "../schemas/art";
 import TextPressure from "./TextPressure";
-// import TextTrail from "./TextTrail"; // refac not working as intended
+import type { AppView } from "../App";
 
 const CAROUSEL_LIMIT = 11;
-// Refac 187: Removed CAROUSEL_HEIGHT_CLASS (h-96)
 
-const ArtworksDisplay: React.FC = () => {
+type ArtworksDisplayProps = {
+  navigateTo: (view: AppView) => void;
+};
+
+const ArtworksDisplay: React.FC<ArtworksDisplayProps> = ({ navigateTo }) => {
   const { artworks, isLoading, error } = useArticApi(CAROUSEL_LIMIT);
 
   if (isLoading) {
@@ -41,10 +44,6 @@ const ArtworksDisplay: React.FC = () => {
 
   return (
     <>
-      {/* <TextTrail text="ArtGal" /> */}
-      {/* <div className="text-3xl p-4 *:font-extrabold mb-6 text-primary border-b border-base-content/20 pb-2">
-        Our Awesome Artworks Gallery{" "}
-      </div> */}
       <div>
         <TextPressure
           text="Our Awesome Artworks Gallery"
@@ -73,13 +72,19 @@ const ArtworksDisplay: React.FC = () => {
                 <div
                   key={item.id}
                   id={itemId}
-                  className="carousel-item w-full relative"
+                  className="carousel-item w-full relative cursor-pointer"
                 >
-                  <img
-                    src={imageUrl}
-                    alt={item.thumbnail?.alt_text || `Image of ${item.title}`}
-                    className={`w-full h-full object-cover`}
-                  />
+                  <a
+                    onClick={() => navigateTo({ view: "details", id: item.id })}
+                    className="w-full h-full block"
+                    aria-label={`View details for ${item.title}`}
+                  >
+                    <img
+                      src={imageUrl}
+                      alt={item.thumbnail?.alt_text || `Image of ${item.title}`}
+                      className={`w-full h-full object-cover`}
+                    />
+                  </a>
 
                   <div className="absolute bottom-0 left-0 right-0 bg-secondary/69 p-4 text-neutral-content bg-neutral-focus bg-opacity-70">
                     <div className="text-2xl font-bold">{item.title}</div>

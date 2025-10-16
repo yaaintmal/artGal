@@ -32,7 +32,8 @@ const App: React.FC = () => {
         return <Creditz />;
       case "featured":
       default:
-        return <ArtworksDisplay />;
+        // passing new prop
+        return <ArtworksDisplay navigateTo={navigateTo} />;
     }
   };
 
