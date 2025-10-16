@@ -97,7 +97,7 @@ const ArtworkDetails: React.FC<ArtworkDetailsProps> = ({ artworkId }) => {
         <div className="text-4xl font-extrabold text-secondary">
           <div
             className="p-4"
-            style={{ position: "relative", height: "128px" }}
+            style={{ position: "relative", height: "256px" }}
           >
             <TextPressure
               text={item.title}
