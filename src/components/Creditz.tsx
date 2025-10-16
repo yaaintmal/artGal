@@ -14,7 +14,7 @@ const furtherCredz = {
   stephan: "Stephan - visit stephanullmann.dev",
   wbs: "WBS Coding School - visit wbscodingschool.com",
   artic: "the Art Institute of Chicago - visit artic.edu",
-  coder: "the coder himself 👋🏽",
+  coder: "the coder himself 👋🏽 - github.com/yaaintmal",
 };
 
 export default function Creditz() {
