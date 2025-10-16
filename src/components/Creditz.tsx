@@ -6,8 +6,8 @@ const creditzExtText = "Ehre wem Ehre gebührt!";
 const creditzFurtherExtText =
   "Deshalb an dieser Stelle ein großer Dank an all unsere Instructoren, vor allem aber";
 const creditzFurtherExtTexTwo = "Renke Brixel & Stephan Ullmann";
-const creditzFurtherExtTexThree =
-  "für den absolut verstehenswerten und leidenschaftlichen Support.";
+const creditzFurtherExtTexThree = "für den absolut verstehenswerten und";
+const creditzFurtherExtTexThreeTwo = "leidenschaftlichen Support.";
 const creditzFurtherExtTexFourIGuess = "u guys pushed us :3";
 const furtherCredz = {
   renke: "Renke - visit renke-brixel.netlify.app",
@@ -33,7 +33,7 @@ export default function Creditz() {
           strokeColor="#222222"
           minFontSize={36}
         />
-        <div className="h-10"></div>
+        <div className="h-4"></div>
         <TextPressure
           text={creditzExtText}
           flex={true}
@@ -46,6 +46,7 @@ export default function Creditz() {
           strokeColor="#222222"
           minFontSize={36}
         />
+        <div className="h-4"></div>
         <TextPressure
           text={creditzFurtherExtText}
           flex={true}
@@ -83,6 +84,19 @@ export default function Creditz() {
           minFontSize={36}
         />
         <TextPressure
+          text={creditzFurtherExtTexThreeTwo}
+          flex={true}
+          alpha={false}
+          stroke={false}
+          width={true}
+          weight={true}
+          italic={true}
+          textColor="#242424"
+          strokeColor="#222222"
+          minFontSize={36}
+        />
+        <div className="h-4"></div>
+        <TextPressure
           text={creditzFurtherExtTexFourIGuess}
           flex={true}
           alpha={false}
@@ -96,7 +110,7 @@ export default function Creditz() {
         />
       </div>
 
-      <div className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-warning to-accent p-4 mt-42">
+      <div className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-warning to-accent p-4 mt-23">
         also visit:
       </div>
       <div className="text-extralight text-xs text-secondary tracking-widest p-4">

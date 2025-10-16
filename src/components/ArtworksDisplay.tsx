@@ -50,7 +50,7 @@ const ArtworksDisplay: React.FC<ArtworksDisplayProps> = ({ navigateTo }) => {
 
   return (
     <>
-      <div>
+      <div className="p-4">
         <TextPressure
           text="Our Awesome Artworks Gallery"
           flex={true}
