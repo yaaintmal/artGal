@@ -110,16 +110,15 @@ export default function Creditz() {
         further creditz
       </div>
       <div className="text-extralight text-xs text-secondary tracking-widest p-4">
-        (in unsorted order):
+        <ul>
+          <li>{furtherCredz.artic}</li>
+          <li>{furtherCredz.wbs}</li>
+          <li>{furtherCredz.coder}</li>
+        </ul>
         <div className="text-extralight text-xs text-secondary tracking-widest p-4">
-          <ul>
-            <li>{furtherCredz.artic}</li>
-            <li>{furtherCredz.wbs}</li>
-            <li>{furtherCredz.coder}</li>
-          </ul>
+          (all in unsorted order :3)
         </div>
       </div>
     </div>
   );
 }
-art - gallery;
