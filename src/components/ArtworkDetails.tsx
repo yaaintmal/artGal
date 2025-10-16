@@ -94,10 +94,10 @@ const ArtworkDetails: React.FC<ArtworkDetailsProps> = ({ artworkId }) => {
   return (
     <>
       <div className="w-full max-w-4xl mx-auto shadow-xl rounded-lg my-8">
-        <div className="text-4xl font-extrabold text-secondary">
+        <div className="text-2xl font-extrabold text-secondary">
           <div
             className="p-4"
-            style={{ position: "relative", height: "256px" }}
+            style={{ position: "relative", height: "128px" }}
           >
             <TextPressure
               text={item.title}
