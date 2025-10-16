@@ -4,7 +4,7 @@ const creditzText = "Creditz";
 
 const creditzExtText = "Ehre wem Ehre gebührt!";
 const creditzFurtherExtText =
-  "Deshalb an dieser Stelle ein großes Dank an all unsere Instructoren, vor allem aber";
+  "Deshalb an dieser Stelle ein großer Dank an all unsere Instructoren, vor allem aber";
 const creditzFurtherExtTexTwo = "Renke Brixel & Stephan Ullmann";
 const creditzFurtherExtTexThree =
   "für den absolut verstehenswerten und leidenschaftlichen Support.";
@@ -12,7 +12,7 @@ const creditzFurtherExtTexFourIGuess = "u guys pushed us :3";
 
 export default function Creditz() {
   return (
-    <div>
+    <div className="mb-23">
       <div className="p-4">
         <TextPressure
           text={creditzText}
