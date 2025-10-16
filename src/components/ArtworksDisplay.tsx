@@ -13,7 +13,11 @@ type ArtworksDisplayProps = {
 };
 
 const ArtworksDisplay: React.FC<ArtworksDisplayProps> = ({ navigateTo }) => {
-  const { artworks, isLoading, error } = useArticApi(CAROUSEL_LIMIT);
+  // REFAC: Added the configuration object { requiresDescription: true }
+  // to apply the same filtering logic as ArtworksList.
+  const { artworks, isLoading, error } = useArticApi(CAROUSEL_LIMIT, {
+    requiresDescription: true,
+  });
 
   if (isLoading) {
     return (
