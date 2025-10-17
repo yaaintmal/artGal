@@ -107,9 +107,10 @@ const ArtworkDetails: React.FC<ArtworkDetailsProps> = ({ artworkId }) => {
               width={true}
               weight={true}
               italic={true}
-              textColor="#242424"
-              strokeColor="#222222"
+              textColor=""
+              strokeColor=""
               minFontSize={36}
+              className="text-primary/80"
             />
           </div>
         </div>
