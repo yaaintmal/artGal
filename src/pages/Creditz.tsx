@@ -81,11 +81,11 @@ const creditzFurtherExtTexThreeTwo = `${randomWord2} Support.`;
 const creditzFurtherExtTexFourIGuess = "u guys pushed us :3";
 const furtherCredz = {
   renke: {
-    text: "Renke - visit renke-brixel.netlify.app",
+    text: "Renke's Webpage",
     link: "https://renke-brixel.netlify.app",
   },
   stephan: {
-    text: "Stephan - visit stephanullmann.dev",
+    text: "Stephan's Webpage",
     link: "https://stephanullmann.dev",
   },
   wbs: "WBS Coding School - visit wbscodingschool.com",
@@ -192,11 +192,32 @@ export default function Creditz() {
       <div className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-warning to-accent p-4 mt-12">
         also visit:
       </div>
-      <div className="text-extralight text-xs text-secondary tracking-widest p-4">
+      <div className="text-extralight text-xs text-secondary tracking-widest">
         <ul>
-          <li>{furtherCredz.renke.text}</li>
-          <li>{furtherCredz.stephan.text}</li>
-          <li>... but not right now, that's why they are not linked :3</li>
+          <li>
+            <button className="btn btn-link">
+              <a
+                href={furtherCredz.renke.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cs text-amber-400 no-underline"
+              >
+                <p>{furtherCredz.renke.text}</p>
+              </a>
+            </button>
+          </li>
+          <li>
+            <button className="btn btn-link">
+              <a
+                href={furtherCredz.stephan.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cs text-amber-400 no-underline"
+              >
+                <p>{furtherCredz.stephan.text}</p>
+              </a>
+            </button>
+          </li>
         </ul>
       </div>
       <div className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-warning to-accent p-4">
