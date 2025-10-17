@@ -4,9 +4,9 @@ const creditzText = "Creditz";
 
 const creditzExtText = "Ehre wem Ehre gebührt!";
 const creditzFurtherExtText =
-  "Deshalb an dieser Stelle ein großer Dank an all unsere Instructoren, vor allem aber";
+  "Daher an dieser Stelle ein großer Dank an all unsere Instructoren, vor allem aber";
 const creditzFurtherExtTexTwo = "Renke Brixel & Stephan Ullmann";
-const creditzFurtherExtTexThree = "für den absolut verstehenswerten und";
+const creditzFurtherExtTexThree = "für den absolut lehrreichen und";
 const creditzFurtherExtTexThreeTwo = "leidenschaftlichen Support.";
 const creditzFurtherExtTexFourIGuess = "u guys pushed us :3";
 const furtherCredz = {
