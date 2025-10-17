@@ -3,7 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 @plugin "daisyui" {
-  themes: lofi --default, wireframe, halloween, abyss, corporate, dark, black;
+  themes: lofi --default, wireframe, corporate;
   /* dark --prefersdark; */
 }
 
