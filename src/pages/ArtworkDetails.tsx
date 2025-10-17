@@ -126,7 +126,7 @@ const ArtworkDetails: React.FC<ArtworkDetailsProps> = ({ artworkId }) => {
           />
         )}
 
-        <div className="text-gray-800 space-y-4 p-4">
+        <div className="space-y-4 p-4">
           <h2 className="text-2xl font-bold border-b pb-1">Details</h2>
           <div className="grid grid-cols-2 gap-4 text-sm">
             <div>
