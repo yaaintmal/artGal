@@ -1,17 +1,64 @@
 import TextPressure from "../components/TextPressure";
 
-const creditzText = "Creditz";
+const howTheyWere = [
+  "movierenden",
+  "leidenschaftlichen",
+  "unterstützenden",
+  "lustigen",
+  "lehrreichen",
+  "professionellen",
+  "interessanten",
+  "engagierten",
+  "hilfsbereiten",
+  "geduldigen",
+  "verständnisvollen",
+  "inspirierenden",
+  "wertschätzenden",
+  "ermutigenden",
+  "souveränen",
+  "zuverlässigen",
+  "kompetenten",
+  "herzlichen",
+  "vorausschauenden",
+  "klaren",
+  "strukturierten",
+  "menschlichen",
+  "motivierenden",
+  "positiven",
+  "emphatischen",
+];
 
+// selecting 2 unique random words
+const getRandomUniqueWords = (arr: string[]) => {
+  const randomIndex1 = Math.floor(Math.random() * arr.length);
+  let randomIndex2;
+
+  do {
+    // keep generating randomIndex2 until it differs randomIndex1
+    randomIndex2 = Math.floor(Math.random() * arr.length);
+  } while (randomIndex1 === randomIndex2);
+
+  return [arr[randomIndex1], arr[randomIndex2]];
+};
+
+const [randomWord1, randomWord2] = getRandomUniqueWords(howTheyWere);
+const creditzText = "Creditz";
 const creditzExtText = "Ehre wem Ehre gebührt!";
 const creditzFurtherExtText =
   "Daher an dieser Stelle ein großer Dank an all unsere Instructoren, vor allem aber";
 const creditzFurtherExtTexTwo = "Renke Brixel & Stephan Ullmann";
-const creditzFurtherExtTexThree = "für den stets motivierenden und";
-const creditzFurtherExtTexThreeTwo = "leidenschaftlichen Support.";
+const creditzFurtherExtTexThree = `für den stets ${randomWord1} und`;
+const creditzFurtherExtTexThreeTwo = `${randomWord2} Support.`;
 const creditzFurtherExtTexFourIGuess = "u guys pushed us :3";
 const furtherCredz = {
-  renke: "Renke - visit renke-brixel.netlify.app",
-  stephan: "Stephan - visit stephanullmann.dev",
+  renke: {
+    text: "Renke - visit renke-brixel.netlify.app",
+    link: "https://renke-brixel.netlify.app",
+  },
+  stephan: {
+    text: "Stephan - visit stephanullmann.dev",
+    link: "https://stephanullmann.dev",
+  },
   wbs: "WBS Coding School - visit wbscodingschool.com",
   artic: "the Art Institute of Chicago - visit artic.edu",
   coder: "the coder himself 👋🏽 - github.com/yaaintmal",
@@ -118,8 +165,8 @@ export default function Creditz() {
       </div>
       <div className="text-extralight text-xs text-secondary tracking-widest p-4">
         <ul>
-          <li>{furtherCredz.renke}</li>
-          <li>{furtherCredz.stephan}</li>
+          <li>{furtherCredz.renke.text}</li>
+          <li>{furtherCredz.stephan.text}</li>
           <li>... but not right now, that's why they are not linked :3</li>
         </ul>
       </div>
