@@ -1,4 +1,4 @@
-const THEMES = ["lofi", "wireframe", "corporate"];
+const THEMES = ["lofi", "wireframe", "corporate", "dark"];
 
 export const getRandomTheme = () => {
   const randomIndex = Math.floor(Math.random() * THEMES.length);
