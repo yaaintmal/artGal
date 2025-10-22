@@ -23,10 +23,20 @@ export type AppView =
 const App: React.FC = () => {
   const [activeView, setActiveView] = useState<AppView>("featured");
 
+  // refac: using data-theme on highest div
+  const [currentTheme, setCurrentTheme] = useState<string>(() => {
+    let theme = sessionStorage.getItem(THEME_STORAGE_KEY);
+
+    if (!theme) {
+      theme = getRandomTheme();
+      sessionStorage.setItem(THEME_STORAGE_KEY, theme);
+    }
+    return theme;
+  });
+
   const navigateTo = (view: AppView) => {
     setActiveView(view);
   };
-
   // creating function to render correct comp based on the active view
   const renderView = () => {
     if (typeof activeView === "object" && activeView.view === "details") {
@@ -44,24 +54,15 @@ const App: React.FC = () => {
         return <ArtworksDisplay navigateTo={navigateTo} />;
     }
   };
-  useEffect(() => {
-    let currentTheme = sessionStorage.getItem(THEME_STORAGE_KEY);
-
-    if (!currentTheme) {
-      currentTheme = getRandomTheme();
-      sessionStorage.setItem(THEME_STORAGE_KEY, currentTheme);
-    }
-
-    document.documentElement.setAttribute("data-theme", currentTheme);
-  }, []);
   return (
-    <div className="flex justify-center">
+    // refac: using data-theme on highest div > rendering with data-theme
+    <div className="flex justify-center" data-theme={currentTheme}>
       {/* setter func for navDoc yayay */}
       <NavDock
         activeView={typeof activeView === "string" ? activeView : "list"}
         setActiveView={navigateTo}
       />
-      <div></div>
+
       <div className="min-h-screen w-full">{renderView()}</div>
     </div>
   );
