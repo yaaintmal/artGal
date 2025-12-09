@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 // components
 import NavDock from "./components/NavDock";
@@ -11,6 +11,7 @@ import ArtworkDetails from "./pages/ArtworkDetails";
 
 // importing themes &
 import { getRandomTheme } from "./utils/themes";
+
 const THEME_STORAGE_KEY = "daisyui-theme";
 
 // union typing for possible views/screens
@@ -30,6 +31,7 @@ const App: React.FC = () => {
     if (!theme) {
       theme = getRandomTheme();
       sessionStorage.setItem(THEME_STORAGE_KEY, theme);
+      setCurrentTheme(theme);
     }
     return theme;
   });
